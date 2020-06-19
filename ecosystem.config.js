@@ -17,7 +17,12 @@ module.exports = {
     }
   ],
 
-  
+  /**
+   * Deployment section
+   * http://pm2.keymetrics.io/docs/usage/deployment/
+   * Step1 (initiate, one time step): pm2 deploy ecosystem.config.js  production setup
+   * Step2:  pm2 deploy ecosystem.config.js  production
+   */
   deploy : {
     production : {
       user : 'root',
