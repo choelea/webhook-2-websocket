@@ -9,7 +9,7 @@ const favicon = require('express-favicon');
 var app = express();
 require('express-ws')(app);
 var webscoket;
-app.ws('/', function(ws, req) {
+app.ws('/wsapp', function(ws, req) {
   webscoket = ws;
     ws.on('message', function(msg) {
       ws.send('Joe tet')

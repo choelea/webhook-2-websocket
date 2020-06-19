@@ -17,7 +17,8 @@
     <script>
         var mess = document.getElementById("mess");
         if(window.WebSocket){
-            var ws = new WebSocket('ws://localhost:4000/');
+            
+            var ws = new WebSocket('ws://'+window.location.host+'/wsapp');
             ws.onopen = function(e){
                 mess.append("连接成功")
             }
