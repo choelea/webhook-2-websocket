@@ -30,7 +30,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:choelea/webhook-2-websocket.git',
       path : '/root/apps/webhook-debuger',
-      'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'nvm use v8.17.0 && npm install && pm2 reload ecosystem.config.js --env production'
     },
     prd : { // quick deploy with out npm install
       user : 'root',
@@ -38,7 +38,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:choelea/webhook-2-websocket.git',
       path : '/root/apps/webhook-debuger',
-      'post-deploy' : 'pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'nvm use v8.17.0 && pm2 reload ecosystem.config.js --env production'
     }
   }
 };
